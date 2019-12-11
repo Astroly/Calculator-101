@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #e54b71;
+  --accent-color: #ffc400;
+  --warm-color: #ffff;
+  --hilight-color: #c83c5f;
+  --main-font-color: #a3a0a0;
+  --bg-color: #efefef;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.calculator-wrap {
+  height: 420px;
+  width: 270px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
+  background-color: var(--bg-color);
+  position: relative;
+  color: var(--main-font-color);
+}
+.banner {
+  height: 120px;
+  background-color: var(--primary-color);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.header {
+  background-color: var(--hilight-color);
+  color: var(--warm-color);
+  font-size: 0.4em;
+  letter-spacing: 1px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+
+}
+.panel-result {
+  background-color: var(--warm-color);
+  height: 100px;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: -60px;
+  box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 20px;
+ 
+}
+.panel-result :nth-last-child(1) {
+  text-align: end;
+  color: black;
+}
+.button-wrapper {
+  width: 85%;
+ 
+  height: 55%;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
+ background-color: var(--warm-color);
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 20px;
+}
+.button-wrapper > button:nth-of-type(4n + 0) {
+  color: var(--warm-color) !important;
+  background-color: var(--primary-color) !important;
+}
+.button-wrapper > button:nth-of-type(16) {
+  color: var(--warm-color) !important;
+
+  background-color: var(--accent-color) !important;
+}
+.button-wrapper > button {
+  border-radius: 50%;
+  border: transparent;
+  background-color: var(--warm-color);
+  box-shadow: 0px 2px 13px -7px rgba(20, 20, 20, 0.75);
+  color: var(--main-font-color);
+}
+.button-wrapper > button:hover {
+  background-color: var(--bg-color) !important;
+  color: var(--primary-color) !important;
+}
+*:focus {
+  outline: none;
+}
+button:focus {
+  background-color: var(--bg-color) !important;
+  color: var(--primary-color) !important;
+}
