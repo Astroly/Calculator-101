@@ -18,9 +18,10 @@ main {
   display: flex;
   align-items: center;
 }
+
 .calculator-wrap {
-  height: 420px;
-  width: 270px;
+  height: 470px;
+  width: 320px;
   margin: 0 auto;
   border-radius: 10px;
   box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
@@ -45,7 +46,6 @@ main {
   z-index: 99;
   position: absolute;
   width: 100%;
-
 }
 .panel-result {
   background-color: var(--warm-color);
@@ -60,7 +60,6 @@ main {
   justify-content: space-between;
 
   padding: 20px;
- 
 }
 .panel-result :nth-last-child(1) {
   text-align: end;
@@ -68,34 +67,39 @@ main {
 }
 .button-wrapper {
   width: 85%;
- 
-  height: 55%;
+
+  height: 60%;
   margin: 0 auto;
   margin-top: 10px;
 
   box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
- background-color: var(--warm-color);
+  background-color: var(--warm-color);
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   grid-gap: 10px;
   padding: 20px;
+
 }
 .button-wrapper > button:nth-of-type(4n + 0) {
   color: var(--warm-color) !important;
   background-color: var(--primary-color) !important;
 }
+
 .button-wrapper > button:nth-of-type(16) {
   color: var(--warm-color) !important;
-
   background-color: var(--accent-color) !important;
 }
+
 .button-wrapper > button {
   border-radius: 50%;
   border: transparent;
+  font-size: 1em;
   background-color: var(--warm-color);
   box-shadow: 0px 2px 13px -7px rgba(20, 20, 20, 0.75);
   color: var(--main-font-color);
+  transition: ease-in 0.5s;
 }
 .button-wrapper > button:hover {
   background-color: var(--bg-color) !important;
