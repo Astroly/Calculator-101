@@ -80,7 +80,6 @@ main {
 
   grid-gap: 15px;
   padding: 18px;
-
 }
 .button-wrapper > button:nth-of-type(4n + 0) {
   color: var(--warm-color) !important;
