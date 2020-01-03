@@ -87,7 +87,7 @@ main {
   background-color: var(--primary-color) !important;
 }
 
-.button-wrapper > button:nth-of-type(16) {
+.button-wrapper > button:nth-of-type(1) {
   color: var(--warm-color) !important;
   background-color: var(--accent-color) !important;
 }
