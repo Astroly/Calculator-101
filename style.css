@@ -11,7 +11,6 @@ main {
 
 .calculator-wrap {
   border-radius: 10px;
-  height: 470px;
   width: 320px;
   margin: 0 auto;
   box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
@@ -55,7 +54,7 @@ main {
 }
 .calculator-wrap .button-wrapper {
   width: 85%;
-  height: 60%;
+  height: 100%;
   margin: 0 auto;
   margin-top: 10px;
   box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
@@ -73,14 +72,19 @@ main {
   box-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
   color: #a3a0a0;
   transition: ease-in 0.5s;
-}
-.calculator-wrap .button-wrapper button:nth-of-type(1) {
-  color: #ffff !important;
-  background-color: #ffc400 !important;
+  padding: 20px;
 }
 .calculator-wrap .button-wrapper button:nth-of-type(4n + 0) {
   color: #ffff !important;
   background-color: #e54b71 !important;
+}
+.calculator-wrap .button-wrapper button:nth-of-type(19), .calculator-wrap .button-wrapper button:nth-last-child(1) {
+  color: #ffff !important;
+  background-color: #ffc400 !important;
+}
+.calculator-wrap .button-wrapper .equal {
+  grid-area: 5/3/5/5;
+  border-radius: 20px !important;
 }
 .calculator-wrap .button-wrapper button:focus {
   background-color: #efefef !important;
