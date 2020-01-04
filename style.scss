@@ -1,0 +1,114 @@
+$primary-color: #e54b71;
+$accent-color: #ffc400;
+$warm-color: #ffff;
+$hilight-color: #c83c5f;
+$main-font-color: #a3a0a0;
+$bg-color: #efefef;
+$calculator-shadow-shadow: 2px 11px 11px -13px rgba(0, 0, 0, 0.63);
+$font: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
+body {
+  font-family: $font;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  align-items: center;
+}
+@mixin bgpri-color {
+  background-color: $bg-color !important;
+  color: $primary-color !important;
+}
+@mixin bd($radius) {
+  border-radius: $radius;
+}
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+.calculator-wrap {
+  @include bd(10px);
+  height: 470px;
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: $calculator-shadow-shadow;
+  background-color: $bg-color;
+  color: $main-font-color;
+  position: relative;
+
+  .header {
+    background-color: $hilight-color;
+    color: $warm-color;
+    font-size: 0.4em;
+    letter-spacing: 1px;
+    padding: 5px 0px;
+    text-align: center;
+    @include bd(10px);
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+  }
+  .banner {
+    height: 120px;
+    background-color: $primary-color;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+  }
+  .panel-result {
+    background-color: $warm-color;
+    height: 100px;
+    width: 85%;
+    margin: 0 auto;
+    margin-top: -60px;
+    box-shadow: $calculator-shadow-shadow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    :nth-last-child(1) {
+      text-align: end;
+      color: black;
+    }
+  }
+  .button-wrapper {
+    width: 85%;
+
+    height: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+
+    box-shadow: $calculator-shadow-shadow;
+    background-color: $warm-color;
+
+    padding: 18px;
+    @include grid();
+    button {
+      @include bd(50%);
+      border: transparent;
+      font-size: 1em;
+      background-color: $warm-color;
+      box-shadow: $calculator-shadow-shadow;
+      color: $main-font-color;
+      transition: ease-in 0.5s;
+    }
+    button:nth-of-type(1) {
+      color: $warm-color !important;
+      background-color: $accent-color !important;
+    }
+    button:nth-of-type(4n + 0) {
+      color: $warm-color !important;
+      background-color: $primary-color !important;
+    }
+    button:focus {
+      @include bgpri-color;
+      outline: none;
+    }
+    button:hover {
+      @include bgpri-color;
+    }
+  }
+}
