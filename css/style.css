@@ -72,6 +72,9 @@ main {
     .calculator-wrap .button-wrapper button:nth-last-child(1) {
       color: #ffff !important;
       background-color: #ffc400 !important; }
+    .calculator-wrap .button-wrapper .equal {
+      grid-area: 5/3/5/5;
+      border-radius: 20px !important; }
     .calculator-wrap .button-wrapper button:focus {
       background-color: #efefef !important;
       color: #e54b71 !important;
