@@ -1,17 +1,23 @@
-var gulp = require('gulp');
-gulp.task('taskName', function() {
-    console.log('taskName');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const del = require('del');
+
+gulp.task('styles', () => {
+    return gulp.src('sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./css/'));
 });
 
-var gulp = require('gulp');
-var sass = require('gulp-ruby-sass');
-
-gulp.task('css', function(){
-  return sass('sass/')
-        .pipe(gulp.dest('./css'));
+gulp.task('clean', () => {
+    return del([
+        'css/main.css',
+    ]);
 });
 
-// gulp.task('default', ['sass'], function() {
+gulp.task('default', gulp.series(['clean', 'styles']));
 
-//     gulp.watch("scss/**/*.scss", ['sass']);
-// });
+gulp.task('watch', () => {
+  gulp.watch('sass/**/*.scss', (done) => {
+      gulp.series(['clean', 'styles'])(done);
+  });
+});
