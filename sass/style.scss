@@ -106,10 +106,7 @@ main {
       color: $warm-color !important;
       background-color: $accent-color !important;
     }
-    // .equal {
-    //   grid-area: 5/3/5/5;
-    //   border-radius: 20px !important;
-    // }
+ 
 
     button:focus {
       @include bgpri-color;
