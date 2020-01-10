@@ -8,7 +8,9 @@ main {
   display: flex;
   align-items: center;
 }
-
+button{
+  cursor: pointer;
+}
 .calculator-wrap {
   border-radius: 10px;
   width: 320px;
@@ -95,7 +97,4 @@ main {
 .calculator-wrap .button-wrapper button:hover {
   background-color: #efefef !important;
   color: #e54b71 !important;
-}
-button{
-  cursor: pointer;
 }
