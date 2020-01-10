@@ -96,3 +96,6 @@ main {
   background-color: #efefef !important;
   color: #e54b71 !important;
 }
+button{
+  cursor: pointer;
+}
