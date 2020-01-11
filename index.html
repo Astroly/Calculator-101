@@ -20,29 +20,29 @@
             <div class="panel-result">
                 <h4>1</h4>
                 <!--show past calculate-->
-                <h4 class="show" value="3">2</h4>
+                <h4 class="show" id="showNum"></h4>
                 <!--show calculate-->
             </div>
             <div class="button-wrapper">
-                <button type="button" class="operator" value="%">%</button>
-                <button type="button" class="operator" value="">+/-</button>
-                <button type="button" class="operator" value="c">C</button>
-                <button type="button" class="operator" value="/">÷</button>
-                <button type="button" value="7">7</button>
-                <button type="button" value="8">8</button>
-                <button type="button" value="9">9</button>
-                <button type="button" class=" operator" value="*">&times</button>
-                <button type="button" value="4">4</button>
-                <button type="button" value="5">5</button>
-                <button type="button" value="6">6</button>
-                <button type="button" class=" operator" value="-">-</button>
-                <button type="button" value="1">1</button>
-                <button type="button" value="2">2</button>
-                <button type="button" value="3">3</button>
-                <button type="button" class=" operator" value="+">+</button>
-                <button type="button" value=".">.</button>
-                <button type="button" value="0">0</button>
-                <button type="button" value="=" class="equal">=</button>
+                <button type="button" class="operator" onclick="inp('%')">%</button>
+                <button type="button" class="operator" onclick="inp('-')">-</button>
+                <button type="button" class="operator" onclick="clr()">C</button>
+                <button type="button" class="operator"  onclick="inp('/')">÷</button>
+                <button type="button" onclick="inp('7')">7</button>
+                <button type="button" onclick="inp('8')">8</button>
+                <button type="button" onclick="inp('9')">9</button>
+                <button type="button" class=" operator" onclick="inp('*')">&times</button>
+                <button type="button" onclick="inp('4')">4</button>
+                <button type="button" onclick="inp('5')">5</button>
+                <button type="button" onclick="inp('6')">6</button>
+                <button type="button" class=" operator" onclick="inp('-')">-</button>
+                <button type="button" onclick="inp('1')">1</button>
+                <button type="button" onclick="inp('2')">2</button>
+                <button type="button" onclick="inp('3')">3</button>
+                <button type="button" class=" operator" onclick="inp('+')">+</button>
+                <button type="button" onclick="inp('.')">.</button>
+                <button type="button" onclick="inp('0')">0</button>
+                <button type="button" value="=" class="equal" onclick="slo()">=</button>
             </div>
         </div>
     </main>
