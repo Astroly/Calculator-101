@@ -1,9 +1,15 @@
 
 
 function inp(value){
-  
-//  var x = document.getElementById(showNum).num;
+
+
  var num = document.getElementById("showNum").innerHTML += value;
+return num;
+
+}
+function historyNum(num){
+
+  document.getElementById("oldNum").innerHTML = document.getElementById("showNum").value;
 
 }
 
